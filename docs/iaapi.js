@@ -12,6 +12,9 @@ const renderJson = (json) => {
   studios.forEach(studio => {//forEach() メソッドは与えられた関数を、配列の各要素に対して一度ずつ実行します。
    const studioDiv = document.createElement('div');//HTML 文書において、 document.createElement() メソッドは tagName で指定された HTML 要素を生成し、または tagName が認識できない場合は HTMLUnknownElement を生成します。
 
+   const studioType = document.createElement("div");
+   studioType.className = 'studio-type';
+   
    const studioTitle = document.createElement("span");
    studioTitle.className = 'studio-title';//className は要素の class 属性の値の取得 / 設定に用います。
    studioTitle.textContent = studio['name-ja'];//textContent は Node のプロパティで、ノードおよびその子孫のテキストの内容を表します。
@@ -39,7 +42,7 @@ const renderJson = (json) => {
    studioDiv.appendChild(faculty);
    document.getElementById('studios').appendChild(studioDiv);//Document の getElementById() メソッドは、 id プロパティが指定された文字列に一致する要素を表す Element オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
  });
-  document.getElementById('result').textContent = JSON.stringify(json, null, 10);//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
+  document.getElementById('result').textContent = JSON.stringify(json, null, 2);//余白の数//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 }
 
 const getData = async () => {//AsyncFunction コンストラクターは、新しい非同期関数オブジェクトを生成します。 JavaScript では、すべての非同期関数が実際に AsyncFunction オブジェクトです。
