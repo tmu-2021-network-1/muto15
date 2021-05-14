@@ -40,6 +40,14 @@ const renderJson = (json) => {
    studioDiv.appendChild(coreType);
    studioDiv.appendChild(coreTypeEn);
    studioDiv.appendChild(faculty);
+
+   studioType.appendChild(coreType);
+   studioType.appendChild(coreTypeEn);
+   studioType.appendChild(faculty);
+
+   document.getElementById('studios').appendChild(studioType);
+
+
    document.getElementById('studios').appendChild(studioDiv);//Document の getElementById() メソッドは、 id プロパティが指定された文字列に一致する要素を表す Element オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);//余白の数//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
