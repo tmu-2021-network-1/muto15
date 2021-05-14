@@ -45,7 +45,7 @@ const renderJson = (json) => {
    studioType.appendChild(coreTypeEn);
    studioType.appendChild(faculty);
 
-   document.getElementById('studios').appendChild(studioType);
+   document.getElementById('core').appendChild(studioType);
 
 
    document.getElementById('studios').appendChild(studioDiv);//Document の getElementById() メソッドは、 id プロパティが指定された文字列に一致する要素を表す Element オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
