@@ -11,14 +11,22 @@ const renderJson = (json) => {
   
   studios.forEach(studio => {//forEach() メソッドは与えられた関数を、配列の各要素に対して一度ずつ実行します。
    const studioDiv = document.createElement('div');//HTML 文書において、 document.createElement() メソッドは tagName で指定された HTML 要素を生成し、または tagName が認識できない場合は HTMLUnknownElement を生成します。
+
    const studioTitle = document.createElement("span");
    studioTitle.className = 'studio-title';//className は要素の class 属性の値の取得 / 設定に用います。
    studioTitle.textContent = studio['name-ja'];//textContent は Node のプロパティで、ノードおよびその子孫のテキストの内容を表します。
+
    const studioTitleEn = document.createElement("span");
    studioTitleEn.className = 'studio-title-en';
    studioTitleEn.textContent = studio['name-en'];
+
+   const coreType = document.createElement("span");
+   studioTitleEn.className = 'core-type';
+   studioTitleEn.textContent = studio['core-ja'];
+
    studioDiv.appendChild(studioTitle);//Node.appendChild() メソッドは、特定の親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していたら、それは現在の親ノードから除かれ、新しい親ノードに追加されます（他のノードに追加する前にそのノードを親ノードから削除する必要はありません）。
    studioDiv.appendChild(studioTitleEn);
+   studioDiv.appendChild(coreType);
    document.getElementById('studios').appendChild(studioDiv);//Document の getElementById() メソッドは、 id プロパティが指定された文字列に一致する要素を表す Element オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
