@@ -28,13 +28,18 @@ const renderJson = (json) => {
    coreTypeEn.className = 'core-type-en';
    coreTypeEn.textContent = studio['core-en'];
 
+   const faculty = document.createElement("span");
+   faculty.className = 'faculty';
+   faculty.textContent = studio['faculty-ja'];
+
    studioDiv.appendChild(studioTitle);//Node.appendChild() メソッドは、特定の親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していたら、それは現在の親ノードから除かれ、新しい親ノードに追加されます（他のノードに追加する前にそのノードを親ノードから削除する必要はありません）。
    studioDiv.appendChild(studioTitleEn);
    studioDiv.appendChild(coreType);
    studioDiv.appendChild(coreTypeEn);
+   studioDiv.appendChild(faculty);
    document.getElementById('studios').appendChild(studioDiv);//Document の getElementById() メソッドは、 id プロパティが指定された文字列に一致する要素を表す Element オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
  });
-  document.getElementById('result').textContent = JSON.stringify(json, null, 2);//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
+  document.getElementById('result').textContent = JSON.stringify(json, null, 10);//JSON.stringify() メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 }
 
 const getData = async () => {//AsyncFunction コンストラクターは、新しい非同期関数オブジェクトを生成します。 JavaScript では、すべての非同期関数が実際に AsyncFunction オブジェクトです。
