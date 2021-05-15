@@ -1,33 +1,94 @@
 body {
-    font-family: sans-serif;
-  }
-  header{
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 0;
+  font-family: sans-serif;
+}
+header{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+ 
+}
+
+li a{
+  text-decoration: none;
+  font-size:26px;
+}
+
+ul{
+  
+  text-align: center;
+ 
+  
    
-  }
 
-  li a{
-    text-decoration: none;
-  }
-  
-  ul{
-    text-align: center;
-  }
- 
-  li{
-    display: inline-block;
-    width: 18%;
-    min-width: 90px;
-    background-color: rgb(110, 110, 245);
-  }
+}
 
-  img{
-    width: 100px;
-    height: 75px;
-  }
+li{
+  display: inline-block;
  
+  min-width: 90px;
   
+  padding-left:40px;
+  padding-right:40px;
+  margin-top:10px;
+  margin-left:20px;
+  margin-right:20px;
+  
+}
+.mainvisual{
+margin-top:250px;
+font-size:40px;
+}
+
+img{
+  
+  display:block;
+  width: 360px;
+  height: 240px;
+  margin-right:0;
+  margin-left:0;
+}
+
+.aStudio{
+ width: 360px;
+height: 290px;
+ display: inline-block;
+
+padding: 20px;
+padding-top:0;
+margin-top:20px;
+
+
+
+}
+h1{
+box-sizing:border-box;
+width: 360px;
+height:20px;
+
+font-size: 15px;
+text-Align:center;
+}
+
+footer{
+text-Align:center;
+margin:100px 0 40px;
+font-size:12px;
+}
+#studios{
+
+width:1200px;
+margin-right:auto;
+margin-left:auto;
+
+
+}
+.mask{
+position:absolute;
+background-color:gray;
+opacity:0.5;
+width: 360px;
+height: 240px;
+font-size:35px;
+}

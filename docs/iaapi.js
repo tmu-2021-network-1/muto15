@@ -6,7 +6,7 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const renderJson = (json) => {
   const studios = json.records;
   
-  //const lastStudio = studios.pop();
+  const lastStudio = studios.pop();
   
   // const editingStudio = studios.find(d => d['name-ja'] === 'エディティングスタジオ');
   // const studioDiv = document.createElement('div');
@@ -24,6 +24,7 @@ const renderJson = (json) => {
   
   studios.forEach((studio) => {
    const studioDiv = document.createElement('div');
+    studioDiv.className = 'aStudio'
    const mask = document.createElement('div');
    mask.className = 'mask';
 
@@ -48,8 +49,9 @@ const renderJson = (json) => {
    mask.appendChild(studioTitleEn);
    mask.appendChild(faculty);
    studioDiv.appendChild(mask);
-   studioDiv.appendChild(studioTitle);
+   
    studioDiv.appendChild(studioSnap);
+    studioDiv.appendChild(studioTitle);
    document.getElementById('studios').appendChild(studioDiv);
   });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
