@@ -21,67 +21,61 @@ li a{
 }
 
 ul{
-  
   text-align: center;
- 
-  
-   
-
 }
 
 li{
   display: inline-block;
- 
   min-width: 90px;
-  
   padding-left:40px;
   padding-right:40px;
   margin-top:10px;
   margin-left:20px;
   margin-right:20px;
-  
 }
-.mainvisual{
-margin-top:250px;
+#mainvisual{
+  height: 600px;
+margin-top:100px;
 font-size:40px;
+background-color: burlywood;
 }
 
 img{
-  
   display:block;
   width: 360px;
   height: 240px;
   margin-right:0;
   margin-left:0;
 }
-
 .aStudio{
- width: 360px;
-height: 290px;
- display: inline-block;
+  width: 360px;
+ height: 290px;
+  display: inline-block;
+ 
+ padding: 20px;
+ padding-top:0;
+ 
+ margin-top:8px;
+ 
+} 
 
-padding: 20px;
-padding-top:0;
-margin-top:8px;
 
-
-
-}
 h1{
-box-sizing:border-box;
-width: 360px;
-height:20px;
-padding-top:4px;
+  box-sizing:border-box;
+  width: 360px;
+  height:20px;
+  padding-top:4px;
 
-font-size: 15px;
-text-Align:center;
+  font-size: 15px;
+  text-Align:center;
 }
 
 footer{
 text-Align:center;
-margin:100px 0 20px;
+margin:60px 0 20px;
 font-size:10px;
 }
+
 #studios{
 
 width:1200px;
@@ -92,15 +86,17 @@ margin-left:auto;
 }
 .mask{
 position:absolute;
-background-color:gray;
-opacity:0.7;
+background-color:rgb(163, 163, 163);
+opacity:0;
 width: 360px;
 height: 240px;
 font-size:35px;
-z-index: 5;
-
-
 }
+
+.mask:hover {
+opacity: 0.7;
+}
+
 
 
 .studio-title-en{
