@@ -5,6 +5,8 @@ function setup(){
 
 }
 function draw(){
+    fill(255,255,255,50);
+    rect(0,0,width,height);
     if(mouseIsPressed){
 	fill(0);
     }
