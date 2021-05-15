@@ -1,28 +1,16 @@
 body {
     font-family: sans-serif;
   }
-  h1, h2 {
-    font-weight: 400;
-    color: steelblue;
-  }
-  #studios > div {
-    margin: 1em 0;
-    padding: 0.5em;
-    background: #f8f8f8;
-    min-height: 3em;
-  }
-  .studio-title {
-    font-weight: bold;
-  }
-  .studio-title-en {
-    margin-left: 1em;
-    font-weight: 100;
-    opacity: 0.75;
-  }
-  .core-type {
-    margin-left: 1em;
-    font-weight: 100;
-    opacity: 0.75;
+  header{
+    box-sizing: border-box;
+    width:100%;
+    padding:30px 4% 10px;
+    background-color: rgb(70, 149, 168);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    
   }
   nav{
     background: #333;
@@ -30,7 +18,7 @@ body {
     top: 0;
     right: 0px;
     width: 100%;
-    
+
   }
   li{
     display: inline-block;
