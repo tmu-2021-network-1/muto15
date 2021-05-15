@@ -17,18 +17,5 @@ body {
     text-decoration: none;
 
   }
-  nav{
-    background: #333;
-    position: fixed;
-    top: 0;
-    right: 0px;
-    width: 100%;
-
-  }
-  li{
-    display: inline-block;
-    font-size: 16px;
-    padding: 30px 20px 25px 28px;
-  }
-
+ 
   
