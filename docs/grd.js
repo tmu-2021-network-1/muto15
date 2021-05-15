@@ -1,76 +1,52 @@
 var canvas;
-function setup(){
-    canvas1 = createCanvas(704,300,WEBGL);
+
+function setup() {
+    canvas1 = createCanvas(1409, 600, WEBGL);
     canvas1.parent("mainvisual");
+    frameRate(10);
+    myCamera = createCamera();
+    let s =0.5 ;
+}
    
-  
-    frameRate(10);
 
+function draw() {
+    
+    
+    s = map(mouseY,0,600,0.2,1);
+    noStroke();
+    rotateY(radians(40 * sin(frameCount / 15)));
+    background(255);
 
+    push();
+    translate(170, 65, -150);
+    rotateY(radians(-7));
+    directionalLight(255, 255, 255, 1, 0, -1);
+    ambientMaterial(255, 255, 255);
+    box(140, 210, 140);
+    pop();
 
-    canvas1 = createCanvas(704,300,WEBGL);
- 
-  
-    frameRate(10);
-   myCamera = createCamera();
+    push();
+    translate(20, 55, 0);
+    directionalLight(255, 255, 255, 0, s, -1);
+    ambientMaterial(255, 255, 255);
+    sphere(90);
+    pop();
+
+    push();
+    translate(-160, 60, -80);
+    rotateY(radians(8));
+    directionalLight(255, 255, 255, 0.5, 0.5, -0.7);
+    ambientMaterial(255, 255, 255);
+    box(130, 200, 130);
+    pop();
+
+    push();
+    translate(-160, -160, -200);
+    directionalLight(255, 255, 255, 0, s, -1);
+    ambientMaterial(220, 220, 220);
+    sphere(80);
+    pop();
+
+    myCamera.camera(0, 15, (height / 2.0) / tan(PI * 30.0 / 180.0), 0, 0, 0, 0, 1, 0);
 
 }
-function draw(){
-  noStroke();
-  ambientLight(200);
-   
-  
- rotateY(radians(40*sin(frameCount/15)));
-  // rotateX(radians(mouseX));
-  
-      background(50);
-  push();
-         translate(95,65,-80);
-  rotateY(radians(-7));
- 
-  normalMaterial()
-        box(70, 110, 70);
-  pop();
-  push();
-         translate(20,55,0);
-         fill(255, 255, 255);
-          sphere(45);
- 
-  pop();
-  push();
-         translate(-70,60,-40);
-   rotateY(radians(8));
- 
- 
-         box(65, 100, 65);
-  pop();
-  push();
-          translate(-88,-38,-100);
-          normalMaterial()
-          fill(255, 255, 255);
-          sphere(40);
-  pop();
-  
-      var dirY = (mouseY / height ) *2;
-  var dirX = (mouseX / width - 0.5) *2;
-
-  //マウスに合わせてライト強弱
-  directionalLight(450, 450, 450, dirX, dirY, 0.65);
-  directionalLight(450, 450, 450, 0.5, 0.9, 1);
-  
-  myCamera.camera(0,15,(height / 2.0) / tan(PI * 30.0 / 180.0),0, 0, 0, 0, 1, 0);
-  
-  
-  
- 
-}
-      
-    
-    
-// 	background(255);
-//   // fill(255);
-//   // rect(0,0,width,height);
-// 	fill(0);
-    
-//     ellipse(mouseX, mouseY, 80, 80);
-   
