@@ -2,6 +2,7 @@ var canvas;
 function setup(){
     canvas = createCanvas(640,480);
     canvas.parent("oekaki");
+    frameRate(10);
 
 }
 function draw(){
