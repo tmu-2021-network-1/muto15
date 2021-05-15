@@ -12,20 +12,44 @@ const renderJson = (json) => {
   // const studioDiv = document.createElement('div');
   // studioDiv.textContent = editingStudio['name-ja'];
   // document.getElementById('studios').appendChild(studioDiv);
+//   <!--<div class="studio">
+//   <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png"alt="">
+//   <div　class="mask">
+//      <p>Editorial<br>Design Studio</p>
+//      <p>楠見清</p>
+//   </div>
+//   <h1>エディティングスタジオ</h1>
+// </div> --> 
+
   
   studios.forEach((studio) => {
    const studioDiv = document.createElement('div');
+   const mask = document.createElement('div');
+   mask.className = 'mask';
 
-   const studioTitle = document.createElement("span");
+   const studioTitle = document.createElement("h1");
    studioTitle.className = 'studio-title';
    studioTitle.textContent = studio['name-ja'];
 
-   const studioTitleEn = document.createElement("span");
+   const studioTitleEn = document.createElement("p");
    studioTitleEn.className = 'studio-title-en';
    studioTitleEn.textContent = studio['name-en'];
+
+   const studioSnap = document.createElement("img");
+   studioSnap.className = 'studio-snap';
+   studioSnap.src = studio['photo1'];
+   studioSnap.alt = "研究室の写真";
+
+   const faculty = document.createElement("p");
+   faculty.className = 'faculty';
+   faculty.textContent = studio['faculty-ja'];
+
    
+   mask.appendChild(studioTitleEn);
+   mask.appendChild(faculty);
+   studioDiv.appendChild(mask);
    studioDiv.appendChild(studioTitle);
-   studioDiv.appendChild(studioTitleEn);
+   studioDiv.appendChild(studioSnap);
    document.getElementById('studios').appendChild(studioDiv);
   });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
