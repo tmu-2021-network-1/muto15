@@ -2,17 +2,22 @@ body {
   font-family: sans-serif;
 }
 header{
+  z-index:10;
   position: fixed;
   width: 100%;
   margin: 0;
   padding: 0;
   top: 0;
+  background-color:white;
+  
  
 }
 
 li a{
   text-decoration: none;
   font-size:26px;
+  color:black;
+ 
 }
 
 ul{
@@ -57,7 +62,7 @@ height: 290px;
 
 padding: 20px;
 padding-top:0;
-margin-top:20px;
+margin-top:8px;
 
 
 
@@ -66,6 +71,7 @@ h1{
 box-sizing:border-box;
 width: 360px;
 height:20px;
+padding-top:4px;
 
 font-size: 15px;
 text-Align:center;
@@ -73,8 +79,8 @@ text-Align:center;
 
 footer{
 text-Align:center;
-margin:100px 0 40px;
-font-size:12px;
+margin:100px 0 20px;
+font-size:10px;
 }
 #studios{
 
@@ -87,8 +93,28 @@ margin-left:auto;
 .mask{
 position:absolute;
 background-color:gray;
-opacity:0.5;
+opacity:0.7;
 width: 360px;
 height: 240px;
 font-size:35px;
+
+
+}
+
+
+.studio-title-en{
+font-size:38px;
+text-Align:left;
+padding-top:10px;
+margin-top:0;
+margin-left:10px;
+top:0px;
+}
+.faculty{
+position:absolute;
+font-size:20px;
+text-Align:right;
+right:15px;
+top:190px;
+
 }
