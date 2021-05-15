@@ -36,8 +36,22 @@ li{
 #mainvisual{
   height: 600px;
 margin-top:100px;
-font-size:40px;
-background-color: burlywood;
+}
+
+#mainvisual p{
+  
+  opacity: 1;
+}
+
+.ia{
+  font-size:70px;
+  padding-left: 20px;
+}
+
+#defaultCanvas0{
+  position:absolute;
+  top:68.5px;
+  z-index: 10;
 }
 
 img{
