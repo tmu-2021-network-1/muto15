@@ -8,23 +8,9 @@ const renderJson = (json) => {
   
   const lastStudio = studios.pop();
   
-  // const editingStudio = studios.find(d => d['name-ja'] === 'エディティングスタジオ');
-  // const studioDiv = document.createElement('div');
-  // studioDiv.textContent = editingStudio['name-ja'];
-  // document.getElementById('studios').appendChild(studioDiv);
-//   <!--<div class="studio">
-//   <img src="https://industrial-art.sd.tmu.ac.jp/images/studio-images/ed1.png"alt="">
-//   <div　class="mask">
-//      <p>Editorial<br>Design Studio</p>
-//      <p>楠見清</p>
-//   </div>
-//   <h1>エディティングスタジオ</h1>
-// </div> --> 
-
-  
   studios.forEach((studio) => {
    const studioDiv = document.createElement('div');
-    studioDiv.className = 'aStudio'
+   studioDiv.className = 'aStudio'
    const mask = document.createElement('div');
    mask.className = 'mask';
 
@@ -51,7 +37,7 @@ const renderJson = (json) => {
    studioDiv.appendChild(mask);
    
    studioDiv.appendChild(studioSnap);
-    studioDiv.appendChild(studioTitle);
+   studioDiv.appendChild(studioTitle);
    document.getElementById('studios').appendChild(studioDiv);
   });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);
