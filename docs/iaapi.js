@@ -6,7 +6,7 @@ const endpoint = `${uri}?id=${id}&sheet=${sheet}`;
 const renderJson = (json) => {
   const studios = json.records;
   
-  const lastStudio = studios.pop();
+  //const lastStudio = studios.pop();
   
   // const editingStudio = studios.find(d => d['name-ja'] === 'エディティングスタジオ');
   // const studioDiv = document.createElement('div');
@@ -15,12 +15,15 @@ const renderJson = (json) => {
   
   studios.forEach((studio) => {
    const studioDiv = document.createElement('div');
+
    const studioTitle = document.createElement("span");
    studioTitle.className = 'studio-title';
    studioTitle.textContent = studio['name-ja'];
+
    const studioTitleEn = document.createElement("span");
    studioTitleEn.className = 'studio-title-en';
    studioTitleEn.textContent = studio['name-en'];
+   
    studioDiv.appendChild(studioTitle);
    studioDiv.appendChild(studioTitleEn);
    document.getElementById('studios').appendChild(studioDiv);
