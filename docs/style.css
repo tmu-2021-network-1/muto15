@@ -24,5 +24,10 @@ body {
     min-width: 90px;
     background-color: rgb(110, 110, 245);
   }
+
+  img{
+    width: 100px;
+    height: 75px;
+  }
  
   
