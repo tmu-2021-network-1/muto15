@@ -37,9 +37,7 @@ const renderJson = (json) => {
 
    studioDiv.appendChild(studioTitle);//Node.appendChild() メソッドは、特定の親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していたら、それは現在の親ノードから除かれ、新しい親ノードに追加されます（他のノードに追加する前にそのノードを親ノードから削除する必要はありません）。
    studioDiv.appendChild(studioTitleEn);
-   studioDiv.appendChild(coreType);
-   studioDiv.appendChild(coreTypeEn);
-   studioDiv.appendChild(faculty);
+   
 
    studioType.appendChild(coreType);
    studioType.appendChild(coreTypeEn);
