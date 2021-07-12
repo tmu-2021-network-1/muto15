@@ -1,21 +1,3 @@
-
-#bg01 {
- 
-  background: url(images/mae.png);
-  height: 3000px;
-}
-#bg02 {
-  
-  background: url(images/mannnaka.png);
-  
-}
-#bg03 {
-  background: url(images/usiro.png);
-  
-}
-
-
-
 /* Parallax base styles
   --------------------------------------------- */
 
@@ -44,11 +26,7 @@
     bottom: 0;
   }
 
-  /* .parallax__layer--fore {
-    -webkit-transform: translateZ(90px) scale(.7);
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
-  } */
+
 
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
@@ -58,14 +36,14 @@
 
   .parallax__layer--back {
     /* -webkit-transform: translateZ(-300px) scale(2); */
-    -webkit-transform: translateZ(-300px) scale(2);
+    -webkit-transform: translateZ(-300px) scale(1.4);
     transform: translateZ(-300px) scale(1.4);
     z-index: 3;
   }
 
   .parallax__layer--deep {
     /* -webkit-transform: translateZ(-600px) scale(3); */
-    -webkit-transform: translateZ(-700px) scale(3);
+    -webkit-transform: translateZ(-700px) scale(1.4);
     transform: translateZ(-700px) scale(1.4);
     z-index: 2;
   }
@@ -75,6 +53,7 @@
 
   body, html {
     overflow: hidden;
+   
   }
 
   body {
@@ -103,9 +82,6 @@
  /* style the groups
   --------------------------------------------- */
 
-  /* #group1 {
-    z-index: 1; 
-  } */
   #group1 .parallax__layer--base {
     background: url(images/base.png);
     background-size: contain;
@@ -121,10 +97,6 @@
   }
   
 
-  /* #group2 {
-    z-index: 2; 
-  } */
-  
   #group2 .parallax__layer--base {
     background: url(images/base.png);
     background-size: contain;
@@ -139,9 +111,6 @@
   }
   
 
-  /* #group3 {
-    z-index: 3; 
-  } */
   #group3 .parallax__layer--base {
     background: url(images/base.png);
     background-size: contain;
@@ -167,5 +136,30 @@
   } */
   
   
+  #group3 .parallax__layer--deep {
+    /* -webkit-transform: translateZ(-600px) scale(3); */
+    /* -webkit-transform: translateZ(-700px) scale(1.4); */
+    transform: translateZ(-700px) scale(1.4);
+    z-index: 2;
+   
+  }
+
+  #group3 .parallax__layer--back {
+    background: url(images/back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+
+  }
+
+  #group3 .parallax__layer--base {
+    background: url(images/base.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(1px);
+   
+  }
 
 
+
+  

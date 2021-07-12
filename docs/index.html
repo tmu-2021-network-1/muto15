@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja>
    <head>
-      <meta charset=" utf-8">
+      <meta charset= charset="utf-8">	
       <link rel="stylesheet" href="style.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet"> 
       <link rel="stylesheet" href="dist/sal.css">
-
+    </head>
       
-</script>
 
-</script>
 
 
    
@@ -39,42 +37,37 @@
           <div class=red >熟考</div>
          
  --> 
+ <!-- <button id="btn" >表示</button> -->
+ <!-- <button onclick="start()">開始</button>
+ <button onclick="stop()">終了</button> -->
+ <div class="parallax" id="parallax">
 
- <div class="parallax">
    <div id="group1" class="parallax__group">
-     <div class="parallax__layer parallax__layer--base">
-       <div class="title">Base Layer</div>
-     </div>
-     <div class="parallax__layer parallax__layer--deep">
-      <div class="title">Deep Background Layer</div>
-    </div>
+     <div class="parallax__layer parallax__layer--base"></div>
+       
+     <div class="parallax__layer parallax__layer--deep" id = deep2></div>
    </div>
    <div id="group2" class="parallax__group">
-     <div class="parallax__layer parallax__layer--base">
-       <div class="title">Base Layer</div>
-     </div>
-     <div class="parallax__layer parallax__layer--back">
-       <div class="title">Background Layer</div>
-     </div>
+     <div class="parallax__layer parallax__layer--base"></div>
      
+     <div class="parallax__layer parallax__layer--back" id = back2></div>
    </div>
+  
    <div id="group3" class="parallax__group">
-     
-     <div class="parallax__layer parallax__layer--base">
-       <div class="title">Base Layer</div>
-     </div>
-     <div class="parallax__layer parallax__layer--back">
-       <div class="title">Background Layer</div>
-     </div>
-     <div class="parallax__layer parallax__layer--deep">
-      <div class="title">Deep Background Layer</div>
+      <div class="parallax__layer parallax__layer--base" id = base1>
+        <!-- <div class="title" >Base Layer</div> -->
+      </div>
+      <div class="parallax__layer parallax__layer--back" id = back1>
+        <!-- <div class="title">Background Layer</div> -->
+      </div>
+      <div class="parallax__layer parallax__layer--deep" id = deep1>
+        <!-- <div class="title">Deep Background Layer</div> -->
+      </div>
     </div>
    </div>
    
-  
  </div>
-
-
+ 
           
            
         
@@ -83,6 +76,28 @@
         
       </footer>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="sample_2.js"></script>
+      <script language="javascript" type="text/javascript">
+        var s_time = null;
+      
+        function start() {
+          s_time = new Date();
+        }
+      
+        function stop() {
+          var e_time = new Date();
+          if(s_time == null) {
+            console.log("開始 -> 終了の順に押してください");
+          } else {
+            var diff = e_time.getTime() - s_time.getTime();
+            console.log("経過時間(ミリ秒):", diff);
+          }
+        }
+        </script>
+      
+      
+
    </body>
 
 </html>
