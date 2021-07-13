@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function () {
     if (on) {
         timeon += 20;
         if(timeon < 750){
-            console.log(timeon);
+            //console.log(timeon);
           btn.style.overflow = "hidden";
     
          
@@ -96,8 +96,8 @@ window.addEventListener("DOMContentLoaded", function () {
           var deep2 = document.getElementById("deep2");
           deep2.style.transform = "translateZ(" + deepva + "px) scale(1.4)";
             }
-        if(timeon  >750 && timeon  <1900){
-        console.log(timeon);
+        if(timeon  >750 && timeon  <1850){
+        //console.log(timeon);
       btn.style.overflow = "hidden";
 
       
@@ -122,19 +122,45 @@ window.addEventListener("DOMContentLoaded", function () {
       deep1.style.filter = "blur(" + deepbl + "px)";
       var deep2 = document.getElementById("deep2");
       deep2.style.transform = "translateZ(" + deepva + "px) scale(1.4)";
-      console.log(basebl);
-      console.log(baseva);
-      console.log(backbl);
-      console.log(backva);
-      console.log(deepbl);
-      console.log(deepva);
+    //   console.log(basebl);
+    //   console.log(baseva);
+    //   console.log(backbl);
+    //   console.log(backva);
+    //   console.log(deepbl);
+    //   console.log(deepva);
         }
 
-      if(timeon >= 1900){
-        var deep1 = document.getElementById("deep1");
-        console.log("wa");
+      if(timeon >= 1850){
+       btn.remove();
     }
     }
   }, 50);
 
 });
+
+
+btn.addEventListener(
+  "scroll",
+  function () {
+
+    var blwh = document.getElementById("blwh");
+    var blwhclientRect = base1.getBoundingClientRect();
+    var x = clientRect.left;
+
+    // 画面の上端から、要素の上端までの距離
+    var y = clientRect.top;
+    console.log(y);
+    if (y == 0) {
+      // 画面の左端から、要素の左端までの距離
+
+      // base1.style.backgroundColor = "#f00";
+      console.log("kitya");
+      on = !on;
+    }
+    //   else{
+    //     base1.style.backgroundColor = "#ff0";
+
+    //   }
+  },
+  false
+);
