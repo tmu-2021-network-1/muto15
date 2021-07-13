@@ -6,6 +6,35 @@ var on = false;
 var basebl = 1;
 var backbl = 3;
 var deepbl = 6;
+var blwhwidth;
+var blwhop;
+var downpos;
+var width1;
+var width2;
+var width3;
+var width4;
+var width5;
+
+
+
+
+const map = (value, fromMin, fromMax, toMin, toMax) => {
+
+  let result = 0;
+
+  result = (value <= fromMin)
+    ? toMin : (value >= fromMax)
+      ? toMax : (() => {
+
+        let ratio = (toMax - toMin) / (fromMax - fromMin);
+        return (value - fromMin) * ratio + toMin;
+
+      })();
+
+  return result;
+
+};
+
 
 
 btn.addEventListener(
@@ -39,7 +68,7 @@ btn.addEventListener(
 
     // 画面の上端から、要素の上端までの距離
     var y = clientRect.top;
-    console.log(y);
+    // console.log(y);
     if (y == 0) {
       // 画面の左端から、要素の左端までの距離
 
@@ -61,10 +90,29 @@ var timeon = 0;
 btn.addEventListener("scroll", function () {});
 
 window.addEventListener("DOMContentLoaded", function () {
+var kitai = document.getElementById('kitai');
+kitai.style.opacity = 0;
+var hikan = document.getElementById('hikan');
+hikan.style.opacity = 0;
+     // div要素を生成
+        var kitaip = document.createElement('p');
+        // classを追加
+        kitaip.textContent = "期待";
+ 
+        // 生成したdiv要素を追加する
+        kitai.appendChild(kitaip);
+
+        var hikanp = document.createElement('p');
+        // classを追加
+        hikanp.textContent = "悲観";
+ 
+        // 生成したdiv要素を追加する
+        hikan.appendChild(hikanp);
   // 0.5秒ごとに実行
   //setInterval(() => {    console.log("Interval type1");  }, 500);
   // 1秒ごとに実行
   setInterval(() => {
+    
     if (on) {
         timeon += 20;
         if(timeon < 750){
@@ -132,35 +180,92 @@ window.addEventListener("DOMContentLoaded", function () {
 
       if(timeon >= 1850){
        btn.remove();
+      
     }
     }
   }, 50);
 
 });
 
+var blwh = document.getElementById("blwh");
+var kara = document.getElementById("kara");
 
-btn.addEventListener(
+blwh.addEventListener(
   "scroll",
   function () {
 
-    var blwh = document.getElementById("blwh");
-    var blwhclientRect = base1.getBoundingClientRect();
-    var x = clientRect.left;
-
+    
+    var blwhclientRect = kara.getBoundingClientRect();
     // 画面の上端から、要素の上端までの距離
-    var y = clientRect.top;
+    var y = blwhclientRect.top;
+    // console.log(y);
+    blwhwidth = map(-y, -815, -415, 0, 90); 
+    blwhop = -map(-y, -815, -415, -1, 0); 
+    // console.log(blwhop);
+   
+    var left = document.getElementById('left');
+    left.style.width = +blwhwidth+'vh';
+    left.style.opacity = (1-blwhop);
+    var kitai = document.getElementById('kitai');
+    kitai.style.opacity = blwhop;
+    var right = document.getElementById('right');
+    right.style.width = +blwhwidth+'vh';
+    right.style.opacity = (1-blwhop);
+    var hikan = document.getElementById('hikan');
+    hikan.style.opacity = blwhop;
+  },
+  false
+);
+
+var up = document.getElementById("up");
+var kara = document.getElementById("kara");
+
+blwh.addEventListener(
+  "scroll",
+  function () {
+
+    
+    var upclientRect = up.getBoundingClientRect();
+    // 画面の上端から、要素の上端までの距離
+    var y = upclientRect.top;
     console.log(y);
-    if (y == 0) {
-      // 画面の左端から、要素の左端までの距離
+    downpos = map(-y, -815, 0, -50, 50); 
+    width1 = map(-y, -115, 0, 0, 200); 
+    width2 = map(-y, -90, 0, 0, 200); 
+    width3 = map(-y, -185, 0, 0, 200); 
+    width4 = map(-y, -75, 0, 0, 200); 
+    width5 = map(-y, -100, 0, 0, 200); 
+    // console.log(blwhop);
+   
+    var downtop = document.getElementById('down');
+    downtop.style.top = +downpos+'%';
+    var rikowidth = document.getElementById('riko');
+    rikowidth.style.width = +width1+'vh';
+    var doryokuwidth = document.getElementById('doryoku');
+    doryokuwidth.style.width = +width2+'vh';
+    var sinnenwidth = document.getElementById('sinnen');
+    sinnenwidth.style.width = +width3+'vh';
+    var yasinwidth = document.getElementById('yasin');
+    yasinwidth.style.width = +width4+'vh';
+    var seigiwidth = document.getElementById('seigi');
+    seigiwidth.style.width = +width5+'vh';
 
-      // base1.style.backgroundColor = "#f00";
-      console.log("kitya");
-      on = !on;
-    }
-    //   else{
-    //     base1.style.backgroundColor = "#ff0";
-
-    //   }
+    var taidawidth = document.getElementById('taida');
+    taidawidth.style.width = +width4+'vh';
+    var hinikuwidth = document.getElementById('hiniku');
+    hinikuwidth.style.width = +width5+'vh';
+    var kenkyowidth = document.getElementById('kenkyo');
+    kenkyowidth.style.width = +width2+'vh';
+    var reisyouwidth = document.getElementById('reisyou');
+    reisyouwidth.style.width = +width3+'vh';
+    var kyomuwidth = document.getElementById('kyomu');
+    kyomuwidth.style.width = +width1+'vh';
+    // kitai.style.opacity = blwhop;
+    // var right = document.getElementById('right');
+    // right.style.width = +blwhwidth+'vh';
+    // right.style.opacity = (1-blwhop);
+    // var hikan = document.getElementById('hikan');
+    // hikan.style.opacity = blwhop;
   },
   false
 );

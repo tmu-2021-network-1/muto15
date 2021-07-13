@@ -49,13 +49,14 @@
 /* demo styles
   --------------------------------------------- */
 
-body,
+
 html {
   overflow: hidden;
 }
 
 body {
-  font: 100% / 1.5 Arial;
+  /* font: 100% / 1.5 Arial; */
+  font-family:"ヒラギノ明朝 Pro",sans-serif;
 }
 
 * {
@@ -151,30 +152,32 @@ body {
 }
 
 #left {
-  background-color: rgb(255, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0,0.9);
   display: inline-block;
   height: 1600px;
-  width: 20vh;
+  /* width: 20vh; */
   line-height: 100vh;
   right: 50%;
   position: absolute;
+  /* overflow: hidden; */
 }
 
 #right {
-  background-color: rgb(0, 255, 0, 0.5);
+  background-color: rgb(255, 255, 255,0.9);
   display: inline-block;
   height: 1600px;
-  width: 20vh;
+  /* width: 20vh; */
   line-height: 100vh;
   left: 50%;
   /* position: absolute; */
   position: absolute;
+  /* z-index: 5; */
 }
 
 #kara {
-  background-color: rgb(0, 0, 255, 0.5);
   display: inline-block;
-  height: 815px;
+  /* height: 400px; */
+  height: 1000px;
   width: 90vh;
   overflow-x: hidden;
   /* line-height: 100vh; */
@@ -189,8 +192,10 @@ body {
   font-size: 0;
   line-height: 0;
   height: 100vh;
-  /* overflow:scroll; */
+  overflow-x: hidden;
   overflow-y:scroll;
+  background-color: rgb(148, 148, 148);
+  z-index: 20;
 }
 
 .kitai {
@@ -213,6 +218,7 @@ body {
   height: 30vh;
   bottom: 0;
   margin: auto;
+  color:black;
 }
 .hikan {
   /* position: fixed; */
@@ -234,4 +240,65 @@ body {
   height: 30vh;
   bottom: 0;
   margin: auto;
+  color:white;
+}
+#up p{
+  font-size: 8vh;
+  line-height: 10vh;
+  color: white;
+}
+#up{
+  /* z-index: 10; */
+  position: relative;
+  height: 50vh;
+  width: 50vh;
+}
+
+.block {
+  width: 1400px;
+  height: 10vh;
+  background-color:white;
+  position: relative;
+  z-index: 10;
+}
+#down .block {
+  width: 50vh;
+  height: 10vh;
+  background-color:black;
+  position: absolute;
+  z-index: 10;
+  right: 0vh;
+}
+#downblack{
+  position: relative;
+}
+#taida{
+  top: -10vh;
+}
+#hiniku{
+  top: -20vh;
+}
+#kenkyo{
+  top: -30vh;
+}
+#reisyou{
+  top: -40vh;
+}
+#kyomu{
+  top: -50vh;
+}
+
+#down p{
+  font-size: 8vh;
+  line-height: 10vh;
+  color: black;
+  text-align: right;
+}
+#down{
+  /* z-index: 10; */
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+  right: 1%;
+  top: -50%;
 }

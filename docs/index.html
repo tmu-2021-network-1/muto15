@@ -5,7 +5,6 @@
       <link rel="stylesheet" href="style.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" href="dist/sal.css">
     </head>
       
 
@@ -37,9 +36,7 @@
           <div class=red >熟考</div>
          
  --> 
- <!-- <button id="btn" >表示</button> -->
- <!-- <button onclick="start()">開始</button>
- <button onclick="stop()">終了</button> -->
+
  <div class="parallax" id="parallax">
    <div id="group1" class="parallax__group">
      <div class="parallax__layer parallax__layer--base"></div>
@@ -61,12 +58,52 @@
      <div id = "left"></div>
      <div id = "right"></div>
 
-     <div class = "kitai"><p>期待</p></div>
+     <div class = "kitai" id = "kitai"></div>
   
-     <div class = "hikan"><p>悲観</p></div>
+     <div class = "hikan" id = "hikan"></div>
+
+     <!-- <div id = "up">
+      <p>利己</p>
+      <p>努力</p>
+      <p>信念</p>
+      <p>野心</p>
+      <p>正義</p>
+    </div> -->
+    <div id = "up">
+      <p>利己</p>
+      <p>努力</p>
+      <p>信念</p>
+      <p>野心</p>
+      <p>正義</p>
+
+      <div class="block" id ="riko"></div>
+      <div class="block" id ="doryoku"></div>
+      <div class="block" id ="sinnen"></div>
+      <div class="block" id ="yasin"></div>
+      <div class="block" id ="seigi"></div>
+    </div>
+    <div id = "down">
+      <div id= "downblack">
+        <div class="block" id ="taida"></div>
+        <div class="block" id ="hiniku"></div>
+        <div class="block" id ="kenkyo"></div>
+        <div class="block" id ="reisyou"></div>
+        <div class="block" id ="kyomu"></div>
+      </div>
+      
+
+      <p>怠惰</p>
+      <p>皮肉</p>
+      <p>謙虚</p>
+      <p>冷笑</p>
+      <p>虚無</p>
+
+      
+    </div>
   </div>
 
-  <!-- <p>aaaaaaa</p> -->
+ 
+  
  
   
          
@@ -76,26 +113,9 @@
       <footer>
         
       </footer>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
       <script type="text/javascript" src="sample_2.js"></script>
-      <script language="javascript" type="text/javascript">
-        var s_time = null;
-      
-        function start() {
-          s_time = new Date();
-        }
-      
-        function stop() {
-          var e_time = new Date();
-          if(s_time == null) {
-            console.log("開始 -> 終了の順に押してください");
-          } else {
-            var diff = e_time.getTime() - s_time.getTime();
-            console.log("経過時間(ミリ秒):", diff);
-          }
-        }
-        </script>
       
       
 
