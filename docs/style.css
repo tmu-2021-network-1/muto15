@@ -49,14 +49,13 @@
 /* demo styles
   --------------------------------------------- */
 
-
 html {
   overflow: hidden;
 }
 
 body {
   /* font: 100% / 1.5 Arial; */
-  font-family:"ヒラギノ明朝 Pro",sans-serif;
+  font-family: "ヒラギノ明朝 Pro", sans-serif;
 }
 
 * {
@@ -152,7 +151,7 @@ body {
 }
 
 #left {
-  background-color: rgb(0, 0, 0,0.9);
+  background-color: rgb(0, 0, 0, 0.9);
   display: inline-block;
   height: 1600px;
   /* width: 20vh; */
@@ -163,7 +162,7 @@ body {
 }
 
 #right {
-  background-color: rgb(255, 255, 255,0.9);
+  background-color: rgb(255, 255, 255, 0.9);
   display: inline-block;
   height: 1600px;
   /* width: 20vh; */
@@ -193,7 +192,7 @@ body {
   line-height: 0;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y:scroll;
+  overflow-y: scroll;
   background-color: rgb(148, 148, 148);
   z-index: 20;
 }
@@ -218,7 +217,7 @@ body {
   height: 30vh;
   bottom: 0;
   margin: auto;
-  color:black;
+  color: black;
 }
 .hikan {
   /* position: fixed; */
@@ -240,14 +239,14 @@ body {
   height: 30vh;
   bottom: 0;
   margin: auto;
-  color:white;
+  color: white;
 }
-#up p{
+#up p {
   font-size: 8vh;
   line-height: 10vh;
   color: white;
 }
-#up{
+#up {
   /* z-index: 10; */
   position: relative;
   height: 50vh;
@@ -257,48 +256,86 @@ body {
 .block {
   width: 1400px;
   height: 10vh;
-  background-color:white;
+  background-color: white;
   position: relative;
   z-index: 10;
 }
 #down .block {
   width: 50vh;
   height: 10vh;
-  background-color:black;
+  background-color: black;
   position: absolute;
   z-index: 10;
   right: 0vh;
 }
-#downblack{
+#downblack {
   position: relative;
 }
-#taida{
+#taida {
   top: -10vh;
 }
-#hiniku{
+#hiniku {
   top: -20vh;
 }
-#kenkyo{
+#kenkyo {
   top: -30vh;
 }
-#reisyou{
+#reisyou {
   top: -40vh;
 }
-#kyomu{
+#kyomu {
   top: -50vh;
 }
 
-#down p{
+#down p {
   font-size: 8vh;
   line-height: 10vh;
   color: black;
   text-align: right;
 }
-#down{
+#down {
   /* z-index: 10; */
   position: absolute;
   height: 50vh;
   width: 50vh;
-  right: 1%;
+  right: 15px;
   top: -50%;
+}
+#sheet{
+  height:100vh;
+  background-color:rgb(121, 121, 121);
+  position:relative;
+  /* transform: translate(-50% -50%); */
+  top:50vh;
+  z-index: 10;
+}
+#sheet2{
+  height:100vh;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.8);
+  position: absolute;
+  /* transform: translate(-50% -50%); */
+  z-index: 11;
+  left: 55vh;
+  top: 0vh;
+}
+#sheet3{
+  height:100vh;
+  width: 100%;
+  background-color:rgba(75, 75, 75, 0.5);
+  position: absolute;
+  /* transform: translate(-50% -50%); */
+  z-index: 12;
+  top: 30vh;
+}
+
+/* .line {
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+} */
+#canvas{
+  width:400px;
+  position: absolute;
+  top: 100px;
 }

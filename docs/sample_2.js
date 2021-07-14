@@ -14,6 +14,7 @@ var width2;
 var width3;
 var width4;
 var width5;
+var starton = false;
 
 
 
@@ -108,6 +109,8 @@ hikan.style.opacity = 0;
  
         // 生成したdiv要素を追加する
         hikan.appendChild(hikanp);
+
+        
   // 0.5秒ごとに実行
   //setInterval(() => {    console.log("Interval type1");  }, 500);
   // 1秒ごとに実行
@@ -260,6 +263,16 @@ blwh.addEventListener(
     reisyouwidth.style.width = +width3+'vh';
     var kyomuwidth = document.getElementById('kyomu');
     kyomuwidth.style.width = +width1+'vh';
+
+    if(-401>y && y>-403){
+      // starton = true;
+      // if(starton){
+        console.log("yawww");
+        new Vivus('canvas', {start: 'autostart', type: 'delayed', duration: 200}); 
+      }
+    // } else{
+    //   starton = false;
+    // }
     // kitai.style.opacity = blwhop;
     // var right = document.getElementById('right');
     // right.style.width = +blwhwidth+'vh';
@@ -269,3 +282,5 @@ blwh.addEventListener(
   },
   false
 );
+
+
