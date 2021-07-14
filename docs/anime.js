@@ -46,7 +46,6 @@ btn.addEventListener(
     // console.log(y);
     if (y == 0) {
       // 画面の左端から、要素の左端までの距離
-      console.log("kitya");
       on = !on;
     }
   },
@@ -56,7 +55,6 @@ btn.addEventListener(
 var g3 = document.getElementById("base1");
 var timeon = 0;
 
-btn.addEventListener("scroll", function () {});
 
 window.addEventListener("DOMContentLoaded", function () {
   var kitai = document.getElementById("kitai");
@@ -67,7 +65,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   kitaip.textContent = "期待";
 
-  // 生成したdiv要素を追加する
   kitai.appendChild(kitaip);
 
   var hikanp = document.createElement("p");
@@ -141,6 +138,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
 var blwh = document.getElementById("blwh");
 var kara = document.getElementById("kara");
+var up = document.getElementById("up");
+var kara = document.getElementById("kara");
 
 blwh.addEventListener(
   "scroll",
@@ -162,19 +161,10 @@ blwh.addEventListener(
     right.style.opacity = 1 - blwhop;
     var hikan = document.getElementById("hikan");
     hikan.style.opacity = blwhop;
-  },
-  false
-);
 
-var up = document.getElementById("up");
-var kara = document.getElementById("kara");
-
-blwh.addEventListener(
-  "scroll",
-  function () {
     var upclientRect = up.getBoundingClientRect();
     var y = upclientRect.top;
-    console.log(y);
+    //console.log(y);
     downpos = map(-y, -815, 0, -50, 50);
     width1 = map(-y, -115, 0, 0, 200);
     width2 = map(-y, -90, 0, 0, 200);
@@ -265,3 +255,4 @@ blwh.addEventListener(
   },
   false
 );
+
