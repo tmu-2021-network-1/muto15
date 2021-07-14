@@ -18,6 +18,7 @@ var starton = false;
 var sheet2pos;
 var sheet3pos;
 
+
 const map = (value, fromMin, fromMax, toMin, toMax) => {
   let result = 0;
 
@@ -37,29 +38,6 @@ const map = (value, fromMin, fromMax, toMin, toMax) => {
 btn.addEventListener(
   "scroll",
   function () {
-    // console.log('クリックされました！');
-    // baseva += 30;
-    // var base1 = document.getElementById('base1');
-    // base1.style.transform = 'translateZ('+baseva+'px)';
-
-    // backva += 30;
-    // var back1 = document.getElementById('back1');
-    // back1.style.transform = 'translateZ('+backva+'px)';
-    // var back2 = document.getElementById('back2');
-    // back2.style.transform = 'translateZ('+backva+'px)';
-
-    // deepva += 30;
-    // var deep1 = document.getElementById('deep1');
-    // deep1.style.transform = 'translateZ('+deepva+'px)';
-    // var deep2 = document.getElementById('deep2');
-    // deep2.style.transform = 'translateZ('+deepva+'px)';
-
-    // var back1 = document.getElementById('back1');
-    // back1.style.backgroundColor = '#f00';
-
-    // var deep1 = document.getElementById('deep1');
-    // deep1.style.backgroundColor = '#f00';
-
     var clientRect = base1.getBoundingClientRect();
     var x = clientRect.left;
 
@@ -68,15 +46,9 @@ btn.addEventListener(
     // console.log(y);
     if (y == 0) {
       // 画面の左端から、要素の左端までの距離
-
-      // base1.style.backgroundColor = "#f00";
       console.log("kitya");
       on = !on;
     }
-    //   else{
-    //     base1.style.backgroundColor = "#ff0";
-
-    //   }
   },
   false
 );
@@ -91,24 +63,18 @@ window.addEventListener("DOMContentLoaded", function () {
   kitai.style.opacity = 0;
   var hikan = document.getElementById("hikan");
   hikan.style.opacity = 0;
-  // div要素を生成
   var kitaip = document.createElement("p");
-  // classを追加
+
   kitaip.textContent = "期待";
 
   // 生成したdiv要素を追加する
   kitai.appendChild(kitaip);
 
   var hikanp = document.createElement("p");
-  // classを追加
   hikanp.textContent = "悲観";
 
-  // 生成したdiv要素を追加する
   hikan.appendChild(hikanp);
 
-  // 0.5秒ごとに実行
-  //setInterval(() => {    console.log("Interval type1");  }, 500);
-  // 1秒ごとに実行
   setInterval(() => {
     if (on) {
       timeon += 20;
@@ -127,7 +93,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var back1 = document.getElementById("back1");
         back1.style.transform = "translateZ(" + backva + "px) scale(1.4)";
         back1.style.filter = "blur(" + backbl + "px)";
-        //back1.style.transform = "scale(1.4)";
+
         var back2 = document.getElementById("back2");
         back2.style.transform = "translateZ(" + backva + "px) scale(1.4)";
 
@@ -164,12 +130,6 @@ window.addEventListener("DOMContentLoaded", function () {
         deep1.style.filter = "blur(" + deepbl + "px)";
         var deep2 = document.getElementById("deep2");
         deep2.style.transform = "translateZ(" + deepva + "px) scale(1.4)";
-        //   console.log(basebl);
-        //   console.log(baseva);
-        //   console.log(backbl);
-        //   console.log(backva);
-        //   console.log(deepbl);
-        //   console.log(deepva);
       }
 
       if (timeon >= 1850) {
@@ -188,10 +148,9 @@ blwh.addEventListener(
     var blwhclientRect = kara.getBoundingClientRect();
     // 画面の上端から、要素の上端までの距離
     var y = blwhclientRect.top;
-    // console.log(y);
+
     blwhwidth = map(-y, -815, -415, 0, 90);
     blwhop = -map(-y, -815, -415, -1, 0);
-    // console.log(blwhop);
 
     var left = document.getElementById("left");
     left.style.width = +blwhwidth + "vh";
@@ -214,7 +173,6 @@ blwh.addEventListener(
   "scroll",
   function () {
     var upclientRect = up.getBoundingClientRect();
-    // 画面の上端から、要素の上端までの距離
     var y = upclientRect.top;
     console.log(y);
     downpos = map(-y, -815, 0, -50, 50);
@@ -225,7 +183,6 @@ blwh.addEventListener(
     width5 = map(-y, -100, 0, 0, 200);
     sheet2pos = map(-y, 400, 670, -180, 55);
     sheet3pos = map(-y, 550, 815, -100, 30);
-    // console.log(blwhop);
 
     var downtop = document.getElementById("down");
     downtop.style.top = +downpos + "%";
